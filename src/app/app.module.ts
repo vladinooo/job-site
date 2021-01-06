@@ -11,10 +11,12 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { environment } from '@src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
