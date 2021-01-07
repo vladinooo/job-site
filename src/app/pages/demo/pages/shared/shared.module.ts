@@ -4,12 +4,15 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { SharedComponent } from './shared.component';
 
+import { ButtonsModule } from '@app/shared';
+
 
 @NgModule({
   declarations: [SharedComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    ButtonsModule
   ]
 })
 export class SharedModule { }

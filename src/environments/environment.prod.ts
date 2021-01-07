@@ -3,7 +3,7 @@ export const environment = {
   name: 'prod',
   firebase: {
     config: {
-      ...
+...
     }
   }
 };
