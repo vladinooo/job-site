@@ -3,11 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  name: 'default',
-  firebase: {
-    config: { }
-  }
+    production: false,
+    name: 'default',
+    firebase: {
+        config: {}
+    }
 };
 
 /*

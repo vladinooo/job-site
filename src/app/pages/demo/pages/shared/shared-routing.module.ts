@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {SharedComponent} from '@app/pages/demo/pages/shared/shared.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: SharedComponent
-  }
+    {
+        path: '',
+        component: SharedComponent
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class SharedRoutingModule { }
+export class SharedRoutingModule {
+}

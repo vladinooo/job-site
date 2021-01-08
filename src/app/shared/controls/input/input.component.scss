@@ -1,0 +1,8 @@
+@import '~styles/colors';
+
+/* Accessing the external element style */
+:host-context(.form-field_error) {
+    input {
+        border: 1px solid $error;
+    }
+}
