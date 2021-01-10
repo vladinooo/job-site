@@ -5,3 +5,5 @@ export * from './password/password.module';
 export * from './select/select.module';
 export * from './checkboxes/checkboxes.module';
 export * from './radios/radios.module';
+export * from './date/date.module';
+export * from './date-range/date-range.module';

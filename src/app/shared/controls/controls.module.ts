@@ -6,6 +6,8 @@ import {PasswordModule} from '@app/shared/controls/password/password.module';
 import {SelectModule} from '@app/shared/controls/select/select.module';
 import {CheckboxesModule} from '@app/shared/controls/checkboxes/checkboxes.module';
 import {RadiosModule} from '@app/shared/controls/radios/radios.module';
+import {DateModule} from '@app/shared/controls/date/date.module';
+import {DateRangeModule} from '@app/shared/controls/date-range/date-range.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {RadiosModule} from '@app/shared/controls/radios/radios.module';
         PasswordModule,
         SelectModule,
         CheckboxesModule,
-        RadiosModule
+        RadiosModule,
+        DateModule,
+        DateRangeModule
     ],
     exports: [
         InputModule,
@@ -25,7 +29,9 @@ import {RadiosModule} from '@app/shared/controls/radios/radios.module';
         PasswordModule,
         SelectModule,
         CheckboxesModule,
-        RadiosModule
+        RadiosModule,
+        DateModule,
+        DateRangeModule
     ]
 })
 export class ControlsModule {
