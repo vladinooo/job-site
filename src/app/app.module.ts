@@ -8,12 +8,22 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireStorageModule} from '@angular/fire/storage';
-
 // Date
 import {MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatDateFormats, MatNativeDateModule} from '@angular/material/core';
 import {environment} from '@src/environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HeaderComponent} from './components/header/header.component';
+
+// Services
+import {NotificationModule} from './services';
+
+// FIX for - Generic type 'ModuleWithProviders<T>' requires 1 type argument(s) error
+declare module '@angular/core' {
+    interface ModuleWithProviders<T = any> {
+        ngModule: Type<T>;
+        providers?: Provider[];
+    }
+}
 
 const APP_DATE_FORMATS: MatDateFormats = {
     parse: {
@@ -41,7 +51,8 @@ const APP_DATE_FORMATS: MatDateFormats = {
         AngularFireAuthModule,
         AngularFireStorageModule,
         BrowserAnimationsModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        NotificationModule.forRoot()
     ],
     providers: [
         {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
