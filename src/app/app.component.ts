@@ -1,22 +1,20 @@
-import { Component } from '@angular/core';
-
-import {AngularFirestore} from '@angular/fire/firestore';
-import {snapshotChanges} from '@angular/fire/database';
+import {Component} from '@angular/core';
+import {Store} from '@ngrx/store';
+import * as fromDictionaries from './store/dictionaries';
+import * as fromRoot from './store';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'job-site';
+    title = 'job-site';
 
-  constructor(private afs: AngularFirestore) {
-  }
+    constructor(private store: Store<fromRoot.State>) {
+    }
 
-  ngOnInit() {
-    this.afs.collection('test').snapshotChanges().subscribe(items => {
-      console.log(items.map(x => x.payload.doc.data()));
-    });
-  }
+    ngOnInit() {
+        this.store.dispatch(new fromDictionaries.Read());
+    }
 }
