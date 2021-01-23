@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {markFormGroupTouched, regex, regexErrors} from '@app/shared/utils';
 import {ControlItem} from '@app/models/frontend';
-import { NotificationService } from '@app/services';
+import {NotificationService} from '@app/services';
 
 @Component({
     selector: 'app-shared',
@@ -129,6 +129,10 @@ export class SharedComponent implements OnInit {
 
     onError(): void {
         this.notification.error('Oops! Something is wrong');
+    }
+
+    onFilesChanged(urls: string | string[]): void {
+        console.log('urls =', urls);
     }
 
 }
