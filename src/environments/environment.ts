@@ -6,7 +6,11 @@ export const environment = {
     production: false,
     name: 'default',
     firebase: {
-        config: {}
+        config: {},
+        actionCodeSettings: {
+            url: 'http://localhost:5200/demo',
+            handleCodeInApp: true
+        }
     }
 };
 
