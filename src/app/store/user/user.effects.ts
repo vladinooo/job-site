@@ -15,7 +15,7 @@ import {User} from './user.models';
 import * as fromActions from './user.actions';
 
 import {NotificationService} from '@app/services';
-import {firestore} from 'firebase';
+import {firestore} from 'firebase/app';
 
 type Action = fromActions.All;
 

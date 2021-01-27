@@ -79,14 +79,14 @@ export class EmployeeComponent implements OnInit, OnDestroy {
                 items: this.dictionaries.skills.controlItems,
                 map: () => {
                     if (this.form.value.specialization) {
-                        this.form.controls.qualification.enable();
+                        this.form.controls.skills.enable();
                         const items = [...this.dictionaries.skills.controlItems].map(
                             (item, index) => ({...item, label: `${item.label} (${index + 1})`})
                         );
                         this.controls.skills.items = items;
                     } else {
-                        this.form.controls.qualification.reset();
-                        this.form.controls.qualification.disable();
+                        this.form.controls.skills.reset();
+                        this.form.controls.skills.disable();
                     }
                 }
             }

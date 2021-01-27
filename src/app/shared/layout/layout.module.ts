@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {UserPhotoModule} from '@app/shared';
+import {UserPhotoModule} from './user-photo/user-photo.module';
 
 
 @NgModule({

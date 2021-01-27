@@ -4,7 +4,8 @@
         <app-input formControlName="companyName"></app-input>
     </app-form-field>
 
-    <app-form-field label="Employees count" [required]="true" [control]="form.controls.employeesCount">
+    <app-form-field label="Employees count" [required]="true" [control]="form.controls.employeesCount"
+                    [patternError]="regexErrors.numbers">
         <app-input formControlName="employeesCount"></app-input>
     </app-form-field>
 

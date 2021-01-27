@@ -1,6 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Dictionaries} from '@app/store/dictionaries';
+import {regex, regexErrors} from '@app/shared/utils/regex';
 
 export interface RecruiterForm {
     companyName: string;
@@ -21,6 +22,7 @@ export class RecruiterComponent implements OnInit, OnDestroy {
     @Input() value: RecruiterForm;
     @Input() dictionaries: Dictionaries;
     form: FormGroup;
+    regexErrors = regexErrors;
 
 
     constructor(private fb: FormBuilder) {
@@ -35,7 +37,8 @@ export class RecruiterComponent implements OnInit, OnDestroy {
             }],
             employeesCount: [null, {
                 updateOn: 'blur', validators: [
-                    Validators.required
+                    Validators.required,
+                    Validators.pattern(regex.numbers)
                 ]
             }]
         });
