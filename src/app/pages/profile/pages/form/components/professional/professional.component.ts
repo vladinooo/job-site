@@ -11,7 +11,7 @@ import {
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {StepperService} from '../stepper/services';
-import {markFormGroupTouched, regex, regexErrors} from '@app/shared';
+import {markFormGroupTouched, regexErrors} from '@app/shared';
 import {Dictionaries} from '@app/store/dictionaries';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RecruiterForm} from './roles/recruiter/recruiter.component';

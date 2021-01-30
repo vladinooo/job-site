@@ -1,14 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
-import {Router} from '@angular/router';
 
-import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore} from '@angular/fire/firestore';
 
-import {from, Observable, of} from 'rxjs';
-import {catchError, map, switchMap, take, tap, withLatestFrom} from 'rxjs/operators';
-
-import {environment} from '@src/environments/environment';
+import {Observable, of} from 'rxjs';
+import {catchError, map, switchMap, take} from 'rxjs/operators';
 
 import {User} from './user.models';
 

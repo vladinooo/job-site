@@ -26,7 +26,7 @@ export function reducer(state = initialState, action: fromActions.All): UserStat
         }
 
         case fromActions.Types.READ_ERROR: {
-            return {...state, entity: null, loading: false, error: null};
+            return {...state, entity: null, loading: false, error: action.error};
         }
 
         // Clear
